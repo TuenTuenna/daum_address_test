@@ -108,7 +108,26 @@
 
         // iframe을 넣은 element를 보이게 한다.
         element_wrap.style.display = 'block';
+      initLayerPosition();
     }
+
+   function initLayerPosition() {
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        var height =
+          window.innerHeight || document.documentElement.clientHeight;
+        element_layer.style.width = width + "px";
+        element_layer.style.height = height + "px";
+        element_layer.style.left =
+          ((window.innerWidth || document.documentElement.clientWidth) -
+            width) /
+            2 +
+          "px";
+        element_layer.style.top =
+          ((window.innerHeight || document.documentElement.clientHeight) -
+            height) /
+            2 +
+          "px";
+      }
 </script>
 
 </body>
